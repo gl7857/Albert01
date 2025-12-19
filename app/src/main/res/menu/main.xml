@@ -15,4 +15,7 @@
     <item
         android:id="@+id/menuActivity4"
         android:title="CameraImageManager (4)" />
+    <item
+        android:id="@+id/menuActivity5"
+        android:title="Reminder (5)" />
 </menu>
