@@ -11,5 +11,8 @@
         android:title="Database (2)" />
     <item
         android:id="@+id/menuActivity3"
-        android:title="ImageManager (2)" />
+        android:title="ImageManager (3)" />
+    <item
+        android:id="@+id/menuActivity4"
+        android:title="CameraImageManager (4)" />
 </menu>
