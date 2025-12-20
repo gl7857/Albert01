@@ -18,4 +18,10 @@
     <item
         android:id="@+id/menuActivity5"
         android:title="Reminder (5)" />
+    <item
+        android:id="@+id/menuActivity6"
+        android:title="PowerMonitor (6)" />
+    <item
+        android:id="@+id/menuActivity7"
+        android:title="GraphActivity (7)" />
 </menu>
