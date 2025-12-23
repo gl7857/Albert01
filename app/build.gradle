@@ -3,11 +3,17 @@ plugins {
     alias(libs.plugins.google.gms.google.services)
 }
 
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()){
+    localPropertiesFile.withReader('UTF-8'){ reader->
+        localProperties.load(reader)
+    }
+}
+
 android {
     namespace 'com.example.albert01'
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.example.albert01"
@@ -17,6 +23,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "GEMINI_API_KEY", "\"${localProperties.getProperty("Gemini_API_Key")}\""
     }
 
     buildTypes {
@@ -25,6 +33,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
@@ -45,4 +58,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.16.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation ("com.google.ai.client.generativeai:generativeai:0.9.0")
+    implementation("com.google.guava:guava:31.1-android")
 }

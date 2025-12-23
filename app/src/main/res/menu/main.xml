@@ -24,4 +24,7 @@
     <item
         android:id="@+id/menuActivity7"
         android:title="GraphActivity (7)" />
+    <item
+        android:id="@+id/menuActivity8"
+        android:title="GeminiActivity (8)" />
 </menu>

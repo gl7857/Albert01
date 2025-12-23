@@ -8,7 +8,8 @@ import com.google.firebase.storage.StorageReference;
 
 public class FBRef {
 
-    public static FirebaseAuth refAuth = FirebaseAuth.getInstance();
+    public static FirebaseAuth refAuth = FirebaseAuth
+            .getInstance();
 
     public static FirebaseDatabase db = FirebaseDatabase.getInstance();
     public static DatabaseReference refMessages = db.getReference("Messages");

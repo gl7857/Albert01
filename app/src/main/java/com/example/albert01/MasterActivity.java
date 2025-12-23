@@ -54,6 +54,10 @@ public class MasterActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Activity7.class);
             startActivity(intent);
             return super.onOptionsItemSelected(item);
+        }else if (id == R.id.menuActivity8) {
+            Intent intent = new Intent(this, Activity8.class);
+            startActivity(intent);
+            return super.onOptionsItemSelected(item);
         }return false;
     }
 }
