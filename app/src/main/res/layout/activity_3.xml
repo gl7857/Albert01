@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Activity3">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Storage Demo"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnSelectUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Select Image (and Upload)"
+        android:onClick="selectImage"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Download Image from Storage"
+        android:onClick="downloadAndDisplayImage"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/ivSelectedImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:background="#DDDDDD"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:contentDescription="Displayed Image" />
+
+</LinearLayout>
